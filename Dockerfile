@@ -24,4 +24,4 @@ WORKDIR /mnt
 #RUN /bin/bash -c 'make update-api'
 #RUN /bin/bash -c 'lunch c4_pro-userdebug'
 #RUN /bin/bash -c 'make -j8'
-CMD ["/bin/sh"]
+CMD ["/bin/bash"]
