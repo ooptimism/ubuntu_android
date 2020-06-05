@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
         libsdl1.2-dev libesd0-dev git-core gnupg \
         zip curl zlib1g-dev gcc-multilib \
         libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev \
-        libx11-dev unzip python-networkx libnss-sss:i386 \
+        libx11-dev unzip python-networkx \
         m4 lib32z1-dev ccache device-tree-compiler \
         python-mako make libssl-dev liblz4-tool bc \
         bsdmainutils libncurses5-dev libwxgtk3.0-dev \
