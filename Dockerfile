@@ -19,8 +19,4 @@ RUN apt-get update && apt-get install -y \
         lzop sudo pngcrush schedtool graphviz lib32z-dev && \
         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#RUN /bin/bash -c 'source build/envsetup.sh'
-#RUN /bin/bash -c 'make update-api'
-#RUN /bin/bash -c 'lunch c4_pro-userdebug'
-#RUN /bin/bash -c 'make -j8'
 CMD ["/bin/bash"]
