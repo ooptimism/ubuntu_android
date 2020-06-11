@@ -19,4 +19,9 @@ RUN apt-get update && apt-get install -y \
         lzop sudo pngcrush schedtool graphviz lib32z-dev && \
         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN mkdir -p /root/.ssh/
+COPY ssh_config /root/.ssh/config
+COPY id_rsa /root/.ssh/id_rsa
+COPY id_rsa.pub /root/.ssh/id_rsa.pub
+
 CMD ["/bin/bash"]
