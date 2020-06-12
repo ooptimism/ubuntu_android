@@ -7,7 +7,7 @@ USER root
 RUN apt-get update && apt-get install -y \
         openjdk-8-jdk libgl1-mesa-dev \
         g++-multilib git flex bison gperf build-essential \
-        tofrodos python-markdown \
+        tofrodos python-markdown vim-common \
         libxml2-utils xsltproc dpkg-dev \
         libsdl1.2-dev libesd0-dev git-core gnupg \
         zip curl zlib1g-dev gcc-multilib \
