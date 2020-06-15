@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y \
         m4 lib32z1-dev ccache device-tree-compiler \
         python-mako make libssl-dev liblz4-tool bc \
         bsdmainutils libncurses5-dev libwxgtk3.0-dev \
-        apt-transport-https \
         lzop sudo pngcrush schedtool graphviz lib32z-dev && \
         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
