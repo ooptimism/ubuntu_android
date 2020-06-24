@@ -23,5 +23,6 @@ RUN mkdir -p /root/.ssh/
 COPY ssh_config /root/.ssh/config
 COPY id_rsa /root/.ssh/id_rsa
 COPY id_rsa.pub /root/.ssh/id_rsa.pub
+RUN chmod 0600 /root/.ssh/*
 
 CMD ["/bin/bash"]
