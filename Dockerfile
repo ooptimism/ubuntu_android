@@ -7,8 +7,8 @@ USER root
 RUN apt-get update && apt-get install -y \
         openjdk-8-jdk libgl1-mesa-dev \
         g++-multilib git flex bison gperf build-essential \
-        tofrodos python-markdown \
-        libxml2-utils xsltproc dpkg-dev \
+        tofrodos python-markdown vim-common \
+        libxml2-utils xsltproc \
         libsdl1.2-dev libesd0-dev git-core gnupg \
         zip curl zlib1g-dev gcc-multilib \
         libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev \
@@ -18,5 +18,11 @@ RUN apt-get update && apt-get install -y \
         bsdmainutils libncurses5-dev libwxgtk3.0-dev \
         lzop sudo pngcrush schedtool graphviz lib32z-dev && \
         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN mkdir -p /root/.ssh/
+COPY ssh_config /root/.ssh/config
+COPY id_rsa /root/.ssh/id_rsa
+COPY id_rsa.pub /root/.ssh/id_rsa.pub
+RUN chmod 0600 /root/.ssh/*
 
 CMD ["/bin/bash"]
