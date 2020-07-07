@@ -22,5 +22,7 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /root/.ssh
 COPY .ssh/ /root/.ssh
 RUN chmod 0600 /root/.ssh/*
+RUN git config --global user.email "xue.lm@neusoft.com"
+RUN git config --global user.name "xuelimin"
 
 CMD ["/bin/bash"]
