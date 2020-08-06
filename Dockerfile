@@ -14,10 +14,12 @@ RUN apt-get update && apt-get install -y \
         libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev \
         libx11-dev unzip python-networkx gettext \
         m4 lib32z1-dev ccache device-tree-compiler \
-        python-mako make libssl-dev liblz4-tool bc \
-        bsdmainutils libncurses5-dev libwxgtk3.0-dev \
+        python-mako make libssl-dev liblz4-tool bc dotnet-runtime-2.2 \
+        bsdmainutils libncurses5-dev libwxgtk3.0-dev apt-transport-https \
         lzop sudo pngcrush schedtool graphviz lib32z-dev filepp && \
         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb
 
 RUN mkdir -p /root/.ssh
 COPY .ssh/ /root/.ssh
