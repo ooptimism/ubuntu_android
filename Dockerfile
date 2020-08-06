@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
         openjdk-8-jdk libgl1-mesa-dev \
         g++-multilib git flex bison gperf build-essential \
         tofrodos python-markdown vim-common \
-        libxml2-utils xsltproc \
+        libxml2-utils xsltproc wget \
         libsdl1.2-dev libesd0-dev git-core gnupg \
         zip curl zlib1g-dev gcc-multilib \
         libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev \
