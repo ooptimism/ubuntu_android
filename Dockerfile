@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb
-RUN apt-get update && apt-get install dotnet-runtime-2.2
+RUN apt-get update && apt-get -y install dotnet-runtime-2.2
 
 RUN mkdir -p /root/.ssh
 COPY .ssh/ /root/.ssh
