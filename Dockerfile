@@ -25,8 +25,6 @@ RUN apt-get update && apt-get -y install dotnet-runtime-2.2
 RUN mkdir -p /root/.ssh
 COPY .ssh/ /root/.ssh
 RUN chmod 0600 /root/.ssh/*
-RUN git config --global user.email "xue.lm@neusoft.com"
-RUN git config --global user.name "xuelimin"
 #configurate netrc
 COPY .netrc /root/.netrc
 
