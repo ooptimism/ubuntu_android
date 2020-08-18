@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
         tofrodos python-markdown vim-common \
         libxml2-utils xsltproc wget kmod \
         libsdl1.2-dev libesd0-dev git-core gnupg \
-        zip curl zlib1g-dev gcc-multilib \
+        zip curl zlib1g-dev gcc-multilib cmake \
         libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev \
         libx11-dev unzip python-networkx gettext \
         m4 lib32z1-dev ccache device-tree-compiler \
