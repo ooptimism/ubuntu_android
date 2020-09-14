@@ -29,5 +29,9 @@ RUN git config --global user.email "xue.lm@neusoft.com"
 RUN git config --global user.name "xuelimin"
 #configurate netrc
 COPY .netrc /root/.netrc
+RUN useradd -ms /bin/bash android
+
+USER android
+WORKDIR /home/android
 
 CMD ["/bin/bash"]
