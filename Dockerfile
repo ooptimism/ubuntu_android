@@ -22,16 +22,16 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsof
 RUN dpkg -i packages-microsoft-prod.deb
 RUN apt-get update && apt-get -y install dotnet-runtime-2.2
 
-RUN mkdir -p /root/.ssh
-COPY .ssh/ /root/.ssh
-RUN chmod 0600 /root/.ssh/*
-RUN git config --global user.email "xue.lm@neusoft.com"
-RUN git config --global user.name "xuelimin"
-#configurate netrc
-COPY .netrc /root/.netrc
 RUN useradd -ms /bin/bash android
+RUN mkdir -p /home/android/.ssh
+COPY .ssh/ /home/android/.ssh
+RUN chmod 0600 /home/android/.ssh/*
+#configurate netrc
+COPY .netrc /home/android/.netrc
+COPY repo /usr/bin/repo
 
 USER android
-WORKDIR /home/android
+RUN git config --global user.email "xue.lm@neusoft.com"
+RUN git config --global user.name "xuelimin"
 
 CMD ["/bin/bash"]
