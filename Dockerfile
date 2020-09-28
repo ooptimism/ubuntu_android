@@ -1,9 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER xuelm <xue.lm@neusoft.com>
 
 USER root
 
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe" >> /etc/apt/sources.list
+RUN echo "deb-src http://us.archive.ubuntu.com/ubuntu/ xenial main universe" >> /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
         openjdk-8-jdk libgl1-mesa-dev \
         g++-multilib git flex bison gperf build-essential \
