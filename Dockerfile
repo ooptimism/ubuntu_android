@@ -30,6 +30,9 @@ RUN chmod 0600 /home/android/.ssh/*
 COPY .netrc /home/android/.netrc
 COPY repo /usr/bin/repo
 
+COPY cmake-3.15.7.tar.gz /
+RUN tar mxf cmake-3.15.7.tar.gz && cd cmake-3.15.7 && ./bootstrap && make && make install
+
 USER android
 RUN git config --global user.email "xue.lm@neusoft.com"
 RUN git config --global user.name "xuelimin"
