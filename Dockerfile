@@ -33,6 +33,9 @@ COPY repo /usr/bin/repo
 
 COPY cmake-3.15.7.tar.gz /
 RUN tar mxf cmake-3.15.7.tar.gz && cd cmake-3.15.7 && ./bootstrap && make && make install
+# compile SDK
+RUN mkdir /pkg
+RUN chown -R android:android /pkg
 
 USER android
 RUN git config --global user.email "xue.lm@neusoft.com"
